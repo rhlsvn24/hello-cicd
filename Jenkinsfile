@@ -1,10 +1,12 @@
+properties([parameters([choice(choices: '4.2.1'\n'4.1.5'\n'4.1.0', description: '', name: 'mver')])])
+
 pipeline {
 
   agent any
   environment {
     //adding a comment for the commit test
     DEPLOY_CREDS = credentials('deploy-anypoint-user')
-    MULE_VERSION = '4.2.1'
+    MULE_VERSION = "${params.mver}"
     BG = "ABC"
     WORKER = "Micro"
   }
