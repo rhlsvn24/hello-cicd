@@ -1,4 +1,4 @@
-properties([parameters([choice(choices: '4.2.1'\n'4.1.5'\n'4.1.0', description: '', name: 'mver')])])
+properties([parameters([choice(choices: '4.2.1\n4.1.5\n4.1.0', description: '', name: 'mver')])])
 
 pipeline {
 
